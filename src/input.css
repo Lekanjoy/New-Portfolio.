@@ -9,6 +9,17 @@
     z-index: 2;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: #D465EF;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar {
+    width: .8rem;
+    background-color: white;
+
+}
+
 .show {
     display: block;
 }
@@ -24,16 +35,22 @@
     color: #615CFD;
 }
 
-.title::before {
-    position: absolute;
-    background: #fff;
-    width: 90px;
-    top: 50%;
-    right: 110%;
-    height: 1px;
-    content: '';
-
+.name {
+    animation: slide 7s linear infinite;
 }
+.icons a .icon:hover{
+    background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
+    transform: scale(1.2);
+    transition: .5s ease-in-out;
+    
+}
+.home{
+    background-image: url(/images/ddd.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 .intro h4::after {
     position: absolute;
@@ -42,12 +59,12 @@
     height: 70px;
     content: '';
     right: 50%;
-    top: -10%;
+    top: 12%;
 
 }
 
 .welcome {
-    height: 70vh;
+    height: 60vh;
 }
 
 .portfolio::before {
@@ -72,18 +89,26 @@
 .jobList:hover img {
     transform: translateY(calc(-100% + 20rem));
 }
+
 @media (min-width: 468px) and (max-width: 767px) {
-     .project-container, .about, .welcome, .skills{
+
+    .project-container,
+    .about,
+    .welcome,
+    .skills {
         padding: 2rem;
     }
-   .about{
-    width: 100%;
-    display: flex;
-    align-items: center;
-   }
 
-   .test, .cards, .about .image, .about .details{
-    max-width: 80%;
-   }
+    .about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .test,
+    .cards,
+    .about .image,
+    .about .details {
+        max-width: 80%;
+    }
 }
-
