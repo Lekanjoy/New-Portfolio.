@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    z-index: 2;
+}
+
+.show {
+    display: block;
+}
+
+.scroll {
+    position: fixed;
+    background-color: black !important;
+    transition: .5s ease-in-out;
+
+}
+
+.active {
+    color: #615CFD;
+}
+
+.title::before {
+    position: absolute;
+    background: #fff;
+    width: 90px;
+    top: 50%;
+    right: 110%;
+    height: 1px;
+    content: '';
+
+}
+
+.intro h4::after {
+    position: absolute;
+    background: #615CFD;
+    width: 1px;
+    height: 70px;
+    content: '';
+    right: 50%;
+    top: -10%;
+
+}
+
+.welcome {
+    height: 70vh;
+}
+
+.portfolio::before {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    content: '';
+    background: #001D38;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+}
+
+
+.jobList img {
+    transform: 0;
+    transition: all 5s ease;
+
+}
+
+.jobList:hover img {
+    transform: translateY(calc(-100% + 20rem));
+}
+@media (min-width: 468px) and (max-width: 767px) {
+     .project-container, .about, .welcome, .skills{
+        padding: 2rem;
+    }
+   .about{
+    width: 100%;
+    display: flex;
+    align-items: center;
+   }
+
+   .test, .cards, .about .image, .about .details{
+    max-width: 80%;
+   }
+}
+
