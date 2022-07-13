@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Olalekan Emmanuel</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="shortcut icon" href="/images/me.jpeg" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="font-mulish bg-primary">
+
+    <!-- Header and Navigations Here -->
+    <header id="header" class="flex justify-between w-full z-50 transition-all text-white bg-black px-4 py-3 text-center 
+    cursor-pointer relative md:bg-transparent md:pt-10 ">
+
+        <div class="logo text-logo font-extrabold">
+            <a href="index.html">Olalekan</a>
+        </div>
+
+        <nav id="nav-links" class="hidden transition-transform md:block">
+            <ul id="ul" class="absolute bg-white pl-4 pt-3 border  border-b-gray-300  text-black w-full  text-left top-12 left-0 md:flex md:gap-4 md:relative md:top-0
+            md:p-0 md:bg-transparent md:text-white md:border-none">
+                <li class="text-primary mb-4"><a href="index.html">Home</a></li>
+                <li class=" mb-4"><a href="about.html">About</a></li>
+                <li class=" mb-4"><a href="services.html">Services</a></li>
+                <li class=" mb-4"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <button class="cta hidden outline-none bg-contact px-4 py-2 relative md:block
+                 md:bottom-3 md:hover:bg-white md:hover:text-primary">Contact Me</button>
+
+
+        <div class="hamburger-menu w-7 md:hidden">
+            <img src="/images/menu1.png" alt=" hamburger-menu" id="menu">
+        </div>
+    </header>
+
+    <main>
+
+
+        <!-- Intro / Welcome Section Here -->
+        <section class="welcome h-mid w-full bg-primary px-2  text-white flex justify-center items-center flex-col md:px-24">
+            <h1 class="text-2xl mb-4">Hello, This is Olalekan Emmanuel</h1>
+            <h4 class="title text-lg relative">Web Developer</h4>
+        </section>
+
+
+        <!-- Skills and Services Here -->
+        <section class=" skills w-full min-h-screen bg-white pt-12 px-6 pb-8 md:px-24">
+            <div class="intro text-center pt-16 mb-8 relative h-auto ">
+                <h4 class="font-light mb-3">SKILLS / TOOLS</h4>
+                <h5 class="weight-700 text-4xl my-0 mx-auto font-bold md:w-mid md:mb-10">
+                    Build and Develop Websites & Digital Projects</h5>
+            </div>
+            <div class="card-container px-2 flex flex-col justify-center items-center md:flex-row gap-6">
+
+                <div class="cards border-solid text-center border border-gray-300
+                     h-auto px-2 py-16 hover:border-primary sm:w-4/5 md:w-1/3">
+                    <div class="icon w-16 my-0 mx-auto pb-3">
+                        <img class="w-full" src="/images/images (1).png" alt="html icon">
+                    </div>
+                    <div class="heading text-center text-2xl mb-4 font-medium">
+                        HTML5
+                    </div>
+                    <div class="text text-gray-500 my0 mx-auto  md:w-auto"> <!---added md auto-->
+                        With this Markup language, I create the basis and foundation of your
+                        intended Website using various
+                    </div>
+                </div>
+
+                <div class="cards border-solid text-center border border-gray-300
+                          h-auto px-2 py-16 hover:border-primary sm:w-4/5 md:w-1/3">
+                    <div class="icon w-16 my-0 mx-auto pb-3">
+                        <img class="w-full" src="/images/download.png" alt="css icon">
+                    </div>
+                    <div class="heading text-center text-2xl mb-4 font-medium">
+                        CSS3
+                    </div>
+                    <div class="text text-gray-500  my0 mx-auto ">
+                        With this Markup language, I create the basis and foundation of your
+                        intended Website using various
+                    </div>
+                </div>
+
+
+                <div class="cards border-solid text-center border border-gray-300
+                          h-auto px-2 py-16 hover:border-primary sm:w-4/5 md:w-1/3">
+                    <div class="icon w-16 my-0 mx-auto pb-3">
+                        <img class="w-full" src="/images/images.jpeg" alt="html icon">
+                    </div>
+                    <div class="heading text-center text-2xl mb-4 font-medium">
+                        JavaScript
+                    </div>
+                    <div class="text text-gray-500 my0 mx-auto ">
+                        With this Markup language, I create the basis and foundation of your
+                        intended Website using various
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- Portfolio Project Section Here -->
+
+        <section class="portfolio text-white w-full h-auto bg-project relative ">
+
+            <div class="intro2 text-center pt-4">
+                <h4 class="pb-6 font-thin">PORTFOLIOS</h4>
+                <h4 class="text-4xl w-4/5 font-semibold my-0 mx-auto mb-12 md:w-1/2">
+                    Some of my awesome <br> Projects here
+                </h4>
+            </div>
+
+            <div class="project-container place-items-center grid auto-rows-fr w-full h-auto gap-6 my-0 mx-auto pb-16 cursor-pointer 
+            px-6 md:grid-cols-4 md:pb-16 md:px-24 md:place-items-start">
+
+                <div class="test md:col-start-1 md:col-end-4 md:row-start-1 md:row-end-3">
+                    <div class="jobList h-80 block border-2 border-white overflow-hidden transition-all ">
+                        <img src="/images/listing.png" alt="Job Listing Project">
+                    </div>
+
+                    <a href="https://github.com/Lekanjoy/Joblisting-with-Search">
+                        <button class="bg-green-500 p-2 border rounded-md mt-4 hover:bg-green-400">View Code</button></a>
+                    <a href="https://dev-job-listing-913ff3.netlify.app/"><button
+                            class="bg-pink-700 p-2 border rounded-md mt-4">Live
+                            Site</button></a>
+
+                </div>
+
+                <div class="test md:col-start-1 md:col-end-6 md:row-end-3">
+                    <div class="jobList mb-0 p-0 h-80 block border-2 border-solid border-white overflow-hidden
+                     transition-all">
+                            <img class="transform-none" src="/images/manage.png" alt="Manage Landing Page"></a>
+                    </div>
+
+                    <a href="https://github.com/Lekanjoy/Lekanjoy-Manage-Landing-Page">
+                        <button class="bg-green-500 p-2 border rounded-md mt-4 hover:bg-green-400">View Code</button></a>
+                    <a href="https://lekanjoy.github.io/Lekanjoy-Manage-Landing-Page/" target="_blank"><button
+                            class="bg-pink-700 p-2 border rounded-md mt-4">Live
+                            Site</button></a>
+
+                </div>
+
+
+                <div class="test md:col-start-4 md:col-end-6 md:row-start-1 md:row-end-3">
+                    <div class="jobList h-80 mt-0 block border-2  border-white overflow-hidden
+                     transition-all ">
+                            <img class="transform-none" src="/images/2.png" alt="Ecommerce Page"></a>
+                    </div>
+
+                    <div class="wrap whitespace-nowrap">
+                        <a href="https://github.com/Lekanjoy/ecommerce-product-page-main" target="_blank">
+                            <button class="bg-green-500 p-2 border rounded-md mt-4 hover:bg-green-400">View Code</button></a>
+                        <a href="https://t.co/GTUloQmZOS" target="_blank"><button
+                                class="bg-pink-700 p-2 border rounded-md mt-4">Live
+                                Site</button></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="folio  grid place-items-center pb-8">
+                <a href="https://github.com/Lekanjoy">
+                    <button class="cta text-center  outline-none bg-white px-8 py-4 relative
+                             text-primary border border-primary hover:bg-primary hover:text-white">
+                        More Folio</button>
+                </a>
+            </div>
+
+
+        </section>
+
+        <!-- About Section Here -->
+        <section class="about w-full h-auto bg-white px-6 py-12 flex flex-col gap-4 md:flex-row md:h-screen md:items-center
+         md:justify-center md:px-24">
+
+            <div class="details mb-6 md:w-2/3">
+                <h5 class="text-5xl text-bgProject font-bold mb-8">About Me</h5>
+                <p class="mb-8 text-gray-500 text-lg lg:w-4/6">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Saepe possimus deleniti architecto ab repellendus unde eaque nesciunt qui,
+                    unde eaque nesciunt qui,em ullam!
+                </p>
+                <a href="cv.docx" download="Olalekan Resume"><button id="download" class="bg-primary py-4 px-8 text-white hover:bg-white
+                     hover:text-primary hover:border-primary hover:border">Download CV</button></a>
+            </div>
+
+            <div class="image w-full h-96 md:w-1/3">
+                <img class="w-full h-full" src="/images/me2-removebg-preview.jpg" alt="Olalekan">
+            </div>
+
+        </section>
+
+
+
+        <!-- Contact Section Here -->
+        <section class="contact w-full h-auto px-6 py-12 text-center font-semibold text-white bg-bgProject md:px-24">
+
+            <div class="details mb-28 w-full md:flex md:justify-center md:items-center md:flex-col">
+            <h5 class="text-4xl mb-7">Let’s discuss for <br class="md:hidden"> a project</h5>
+                <p class="text-base text-gray-300 mb-10 md:w-mid ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta accusantium
+                     quis quaerat dolor perferendis repellat, quia eum voluptas nulla quidem.</p>
+
+                     <a class="py-4 px-12 bg-primary hover:text-blue-700 hover:bg-transparent hover:border hover:border-blue-700" href="">Reach Out</a>
+            </div>
+
+            <div class="socials  pb-12 border-b-gray-500 border 
+            border-x-transparent border-t-transparent ">
+
+                <div class="icons grid grid-cols-4 gap-3 w-56">
+                    <a href="https://github.com/Lekanjoy" target="_blank"><i class="fab fa-github p-3 border border-footer rounded-full"></i></a>
+                    <a href="https://twitter.com/Olalaykun"target="_blank"><i class="fab fa-twitter p-3 border border-footer rounded-full"></i></a>
+                    <a href="https://www.linkedin.com/in/olalekan-alabi-b3740a220/"target="_blank"><i class="fab fa-linkedin-in p-3 border border-footer rounded-full"></i></a>
+                    <a href="https://web.facebook.com/alabi.lekanemmanuel?_rdc=1&_rdr"target="_blank"><i class="fab fa-facebook-f p-3 border border-footer rounded-full"></i></a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="foot bg-bgProject text-gray-100 text-center pb-6">
+        <p class="text-base text-footer">Copyright ©2022 All rights reserved | Design by<span class="text-primary"> Colorlib</span></p>
+    </footer>
+
+</body>
+
+</html>
