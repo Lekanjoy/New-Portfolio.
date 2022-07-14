@@ -32,4 +32,11 @@ downloadBtn.addEventListener('click',() => {
   setTimeout(() => { 
     downloadBtn.textContent = "Download CV"
   },3000)
-})
+});
+
+// Preloader
+window.addEventListener('load', () => {
+let preloader = document.getElementById("preloader");
+
+preloader.style.display = 'none';
+});
