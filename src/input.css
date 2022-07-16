@@ -19,39 +19,38 @@
     background-color: white;
 
 }
+/* Toggle class for Hamburger */
 
 .show {
     display: block;
 }
-
+/* Toggle class for Header scroll */
 .scroll {
     position: fixed;
     background-color: black !important;
     transition: .5s ease-in-out;
-
 }
-
-.active {
-    color: #615CFD;
-}
-
-.name {
-    animation: slide 7s linear infinite;
-}
-.icons a .icon:hover{
+.icons a .icon:hover {
     background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
     transform: scale(1.2);
     transition: .5s ease-in-out;
-    
+
 }
-.home{
+input{
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+:placeholder-shown{
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.home {
     background-image: url(/images/ddd.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-
 .intro h4::after {
     position: absolute;
     background: #615CFD;
@@ -64,7 +63,10 @@
 }
 
 .welcome {
-    height: 60vh;
+    height: 40vh;
+}
+.home {
+    height: 70vh;
 }
 
 .portfolio::before {

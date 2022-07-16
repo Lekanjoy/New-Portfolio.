@@ -11,7 +11,10 @@
     <script src="script.js" defer></script>
 </head>
 
-<body class="font-mulish bg-primary">
+<body class="font-mulish">
+
+        <div id="preloader"  class="w-full h-screen bg-preload bg-no-repeat bg-cover bg-center fixed z-50 "></div>
+
     <header id="header" class="flex justify-between w-full z-50 transition-all text-white bg-lightBlack px-4 py-3 text-center 
         cursor-pointer relative md:bg-black md:pt-10 ">
     
@@ -40,24 +43,61 @@
         </div>
     </header>
 
-        <section class="welcome h-screen w-full bg-primary px-2  text-white flex justify-center items-center flex-col">
+        <section class="welcome h-screen w-full bg-purple-600 px-2  text-white flex justify-center items-center flex-col">
         
-            <h1 class="text-2xl mb-4">CONTACT ME</h1>
+            <h1 class="text-2xl font-bold md:text-4xl">Contact Us</h1>
     
+        </section>
+
+        <section class="on form px-6 bg-white w-full h-auto py-20 md:px-24 ">
+            <legend class="pb-8 text-bgProject text-3xl font-semibold">Get in Touch</legend>
+
+            <form class=" w-full " id="myForm">
+            <textarea class="outline-none border border-gray-300 w-full mb-5 resize-none"  name="message" id="msg" cols="30" rows="9" placeholder="Enter Message"></textarea><br>
+            <input class="outline-none border border-gray-300 w-full" id="name"  type="text" placeholder="Enter your name"><br> 
+            <input class="outline-none border border-gray-300 w-full"  id="email" type="text" placeholder="Enter your email address"><br> 
+            <input class="outline-none border border-gray-300 w-full"  id="subject" type="text" placeholder="Enter Subject"><br>
+            <input id="submit" class="border border-blue-800 px-12 text-primary hover:border-none hover:bg-primary hover:text-white cursor-pointer" type="submit" value="SEND MESSAGE"> 
+            </form>
+
+            <div class="media-contact  cursor-pointer w-full md:max-w-sm">
+
+                <div class="location flex gap-5 pb-8">
+                    <div class="icon ">
+                        <i class="fas fa-house-user text-3xl"></i>
+                    </div>
+                    <div class="details">
+                        <p class="text-lightBlack font-medium text-xl">Lagos, Nigeria</p>
+                    </div>
+                </div>
+
+                <div class="phone flex gap-5 pb-8">
+                    <div class="icon ">
+                        <i class="fas fa-phone text-3xl"></i>
+                    </div>
+                    <div class="details">
+                        <a class="text-lightBlack font-medium text-xl pb-2 hover:text-primary" href="tel:+234 810 0185 3701">+234 810 0185 3701</a>
+                        <p class="text-gray-400">Mon to Fri 9am to 5pm</p>
+                    </div>
+                </div>
+
+                <div class="email flex gap-5 pb-8">
+                    <div class="icon ">
+                        <i class="fas fa-mail-bulk text-3xl"></i>
+                    </div>
+                    <div class="details whitespace-nowrap overflow-hidden overflow-ellipsis hover:overflow-visible hover:whitespace-normal">
+                        <a class="text-lightBlack font-medium text-xl pb-2 hover:text-primary" 
+                        href="mailto:alabilekanemmanuel@gmail.com">alabilekanemmanuel@gmail.com</a>
+                        <p class="text-gray-400">Send us a mail anytime!</p>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
 
     <!-- Contact Section Here -->
     <section class="contact w-full h-auto px-6 py-12 text-center font-semibold text-white bg-bgProject md:px-24">
-    
-        <div class="details mb-28 w-full md:flex md:justify-center md:items-center md:flex-col">
-            <h5 class="text-4xl mb-7">Let’s discuss for <br class="md:hidden"> a project</h5>
-            <p class="text-base text-gray-300 mb-10 md:w-mid ">Guess, you need an Exquisite Website for your Business.
-                Let's discuss for and project and be rest assured of top-notch delivery.
-            </p>
-    
-            <a class="py-4 px-12 bg-primary hover:text-blue-700 hover:bg-transparent hover:border hover:border-blue-700"
-                href="">Reach Out</a>
-        </div>
     
         <div class="socials  pb-12 border-b-gray-500 border 
                     border-x-transparent border-t-transparent ">
@@ -82,6 +122,7 @@
         <p class="text-base text-footer">Copyright ©2022 All rights reserved | Design by<span class="text-primary">
                 Colorlib</span></p>
     </footer>
+
 </body>
 
 </html>
