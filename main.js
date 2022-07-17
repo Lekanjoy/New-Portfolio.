@@ -48,7 +48,7 @@ function validateForm(e) {
   function validateFields() {
     let successPage = document.getElementById("success");
 
-    if (  userName.value !== "" && userEmail.value !== "" && userSubject.value !== "" ) {
+    if (  userName.value !== "" && userEmail.value !== "") {
         // Function to send email
       function sendEmail() {
         let params = {
