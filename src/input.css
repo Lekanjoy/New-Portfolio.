@@ -30,6 +30,16 @@
     background-color: black !important;
     transition: .5s ease-in-out;
 }
+/* Sucess Page */
+.success{
+    display: flex;
+    transition: .5s ease-in;
+}
+#contact{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
 .icons a .icon:hover {
     background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
     transform: scale(1.2);
@@ -37,7 +47,7 @@
 
 }
 input{
-    margin-bottom: 2rem;
+    margin-bottom: .75rem;
     padding: 1rem;
 }
 :placeholder-shown{
@@ -67,6 +77,12 @@ input{
 }
 .home {
     height: 70vh;
+}
+.name{
+    text-shadow: 5px 2px 3px rgb(22 226 141);
+}
+.name span{
+    text-shadow: none;
 }
 
 .portfolio::before {
