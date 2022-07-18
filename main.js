@@ -33,13 +33,11 @@ window.addEventListener("scroll", () => {
 const myForm = document.getElementById("myForm");
 myForm.addEventListener("submit", validateForm);
 
-
 function validateForm(e) {
   e.preventDefault();
 
   const userName = document.getElementById("name");
   const userEmail = document.getElementById("email");
-  const userSubject = document.getElementById("subject");
   const message = document.getElementById("msg");
 
   validateLabels();
@@ -47,20 +45,30 @@ function validateForm(e) {
 
   function validateFields() {
     let successPage = document.getElementById("success");
+    if (userName.value !== "" && userEmail.value !== "") {
+      // Function to send email
+        function sendEmail() {
+          let params = {
+            from_name: userName.value,
+            message: message.value,
+            email_id: userEmail.value,
+          };
 
-    if (  userName.value !== "" && userEmail.value !== "") {
-        // Function to send email
-      function sendEmail() {
-        let params = {
-          from_name: userName.value,
-          message: message.value,
-          email_id: userEmail.value,
+          emailjs.send("service_bq8azlf", "template_kcuidoi", params)
+            .then(() => {
+              successPage.classList.add("success"); //Open Success PopUp
+              userName.disabled = true;
+              userEmail.disabled = true;
+              message.disabled = true;
+              document.getElementById("submit").disabled = true;
+            })
+            .catch(() => {
+              document.getElementById("status-img").src = '/images/failed.gif';
+              document.getElementById("status-msg").textContent = 'Email Sending Unsuccessful!!';
+              successPage.classList.add("success"); //Open Failed PopUp
+            })
         };
-        emailjs.send("service_bq8azlf", "template_kcuidoi", params);
-      }
-
-      sendEmail();
-      successPage.classList.add("success"); //Open PopUp
+        sendEmail();
 
       // Close PopUp
       const successCard = document.getElementById("success");
@@ -68,16 +76,10 @@ function validateForm(e) {
 
       cancel.addEventListener("click", () => {
         successCard.style.display = "none";
-
         setTimeout(() => {
           location.reload();
         }, 1000);
       });
-
-      userName.disabled = true;
-      userEmail.disabled = true;
-      userSubject.disabled = true;
-      message.disabled = true;
     }
   }
 
@@ -86,25 +88,17 @@ function validateForm(e) {
     for (let i = 0; i < label.length; i++) {
       if (label[i].htmlFor === "name" && userName.value === "") {
         label[i].textContent = "Field is Required.";
-        label[i].style.fontSize = "14px";
         setTimeout(() => {
           label[i].textContent = "*";
         }, 5000);
       }
       if (label[i].htmlFor === "email" && userEmail.value === "") {
         label[i].textContent = "Field is Required.";
-        label[i].style.fontSize = "14px";
 
         setTimeout(() => {
           label[i].textContent = "*";
         }, 5000);
       }
-      /*       if (label[i].htmlFor === "subject" && userSubject.value === "") {
-        label[i].textContent = "Field is Required.";
-        setTimeout(() => {
-          label[i].textContent = "*";
-        }, 5000);
-      } */
     }
   }
 }

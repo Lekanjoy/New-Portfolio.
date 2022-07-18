@@ -15,12 +15,11 @@
 }
 
 ::-webkit-scrollbar {
-    width: .8rem;
+    width:  .8rem;
     background-color: white;
 
 }
 /* Toggle class for Hamburger */
-
 .show {
     display: block;
 }
@@ -28,9 +27,9 @@
 .scroll {
     position: fixed;
     background-color: black !important;
-    transition: .5s ease-in-out;
+    transition: .8s ease-in;
 }
-/* Sucess Page */
+/* Success PopUp */
 .success{
     display: flex;
     transition: .5s ease-in;
