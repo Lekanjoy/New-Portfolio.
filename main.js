@@ -35,70 +35,82 @@ myForm.addEventListener("submit", validateForm);
 
 function validateForm(e) {
   e.preventDefault();
-
   const userName = document.getElementById("name");
   const userEmail = document.getElementById("email");
   const message = document.getElementById("msg");
-
+  
+// Invoking the Functions
   validateLabels();
   validateFields();
 
   function validateFields() {
-    let successPage = document.getElementById("success");
+    const statusPage = document.getElementById("success");
+
     if (userName.value !== "" && userEmail.value !== "") {
+      sendEmail();
+
       // Function to send email
-        function sendEmail() {
-          let params = {
-            from_name: userName.value,
-            message: message.value,
-            email_id: userEmail.value,
-          };
-
-          emailjs.send("service_bq8azlf", "template_kcuidoi", params)
-            .then(() => {
-              successPage.classList.add("success"); //Open Success PopUp
-              userName.disabled = true;
-              userEmail.disabled = true;
-              message.disabled = true;
-              document.getElementById("submit").disabled = true;
-            })
-            .catch(() => {
-              document.getElementById("status-img").src = '/images/failed.gif';
-              document.getElementById("status-msg").textContent = 'Email Sending Unsuccessful!!';
-              successPage.classList.add("success"); //Open Failed PopUp
-            })
+      function sendEmail() {
+        let params = {
+          from_name: userName.value,
+          message: message.value,
+          email_id: userEmail.value,
         };
-        sendEmail();
 
-      // Close PopUp
-      const successCard = document.getElementById("success");
-      const cancel = document.getElementById("cancel");
+        emailjs.send("service_bq8azlf", "template_kcuidoi", params)
+          .then(() => {
+            statusPage.classList.add("success"); //Open Success PopUp
+            // Disabling the Input Fields
+            userName.disabled = true;
+            userEmail.disabled = true;
+            message.disabled = true;
+            document.getElementById("submit").disabled = true;
+            // Refreshing Page after successful email and user closing the PopUp
+            setTimeout(() => {
+              cancelStatusPage();
+            }, 1000);
+          })
+          .catch((err) => {
+            console.error(err);
+            document.getElementById("status-img").src = "/images/failed.gif";
+            document.getElementById("status-msg").textContent = 'Message Unsucccesful!!';
+            statusPage.classList.add("success"); //Open Failed PopUp if error occurs
+            cancelStatusPage();
 
-      cancel.addEventListener("click", () => {
-        successCard.style.display = "none";
-        setTimeout(() => {
-          location.reload();
-        }, 1000);
-      });
+          });
+      };
+
+      // Close/Cancel PopUp
+      function cancelStatusPage() {
+        const cancel = document.getElementById("cancel");
+        cancel.addEventListener("click", () => {
+          statusPage.style.display = "none";
+        });
+      };
+
+
     }
   }
 
   function validateLabels() {
     let label = document.querySelectorAll("label");
     for (let i = 0; i < label.length; i++) {
-      if (label[i].htmlFor === "name" && userName.value === "") {
-        label[i].textContent = "Field is Required.";
-        setTimeout(() => {
-          label[i].textContent = "*";
-        }, 5000);
-      }
-      if (label[i].htmlFor === "email" && userEmail.value === "") {
-        label[i].textContent = "Field is Required.";
 
+      if (label[i].htmlFor === "name" && userName.value === "" || label[i].htmlFor === "email" && userEmail.value === "") {
+        label[i].textContent = "Field is Required.";
         setTimeout(() => {
           label[i].textContent = "*";
         }, 5000);
       }
+      // if (label[i].htmlFor === "email" && userEmail.value === "") {
+      //   label[i].textContent = "Field is Required.";
+
+      //   setTimeout(() => {
+      //     label[i].textContent = "*";
+      //   }, 5000);
+      // }
     }
   }
-}
+
+
+};

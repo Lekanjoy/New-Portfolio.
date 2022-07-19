@@ -1661,3 +1661,17 @@ input{
     width: 66.666667%;
   }
 }
+
+@media (orientation: landscape){
+  .landscape\:top-1\/4{
+    top: 25%;
+  }
+
+  .landscape\:h-56{
+    height: 14rem;
+  }
+
+  .landscape\:w-2\/4{
+    width: 50%;
+  }
+}
