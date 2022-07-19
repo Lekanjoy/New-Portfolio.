@@ -65,9 +65,10 @@ function validateForm(e) {
             userEmail.disabled = true;
             message.disabled = true;
             document.getElementById("submit").disabled = true;
+              cancelStatusPage();
             // Refreshing Page after successful email and user closing the PopUp
             setTimeout(() => {
-              cancelStatusPage();
+              location.reload();
             }, 1000);
           })
           .catch((err) => {
